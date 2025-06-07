@@ -38,6 +38,26 @@ These packs and tiles will automatically get deployed with the mod upon running 
 (assuming you added them to settings.sh).
 
 
+## Mod Code Directory Structure
+
+* `src/preview.png` - the default Steam preview image
+* `src/YOURMOD/mod.info` - the mod definition for B41
+* `src/YOURMOD/42/mods.info` - the mod definition for B42
+
+Any mod code for B41 should be at the top level directory and B42 will be in `common` and/or `42`.
+
+
+## Mods with Multiple Mods
+
+A single workshop mod can contain nested mods; this is useful for a single mod which has multiple options,
+ie: a mod that adds zombies with a crazy difficult level and another mod that adds the zombies but with a lower difficulty.
+
+If you have `MyModA` and `MyModB` with the `MOD_NAME` of `MyMod`, 
+your `src` would contain `MyModA` and `MyModB` each with their own mod declarations.
+
+When deploying the code, they will both get included in a single Steam workshop item.
+
+
 ## Deploying Local Code
 
 Run `deploy_local.sh` to install the mod in your local game directory.
