@@ -24,35 +24,18 @@ This setup generally only needs to be run once.
 
 ## Tiles and Spritemap
 
-### Create new tileset
+Pre-compiled spritemaps can be placed in `designs/tilesets` or individual tile images can be placed
+in `designs/tiles` and compiled with `generate_tilesets.sh`.
 
-This step is not required for this project as a tileset is already created,
-but including instructions for future reference.
+These can be used to generate `Pack` files to get imported into tiles with TileZed.
 
-1. Run TileZed.sh and click Tools -> Tilesets... to rebuild the local cache of tilesets
-2. (if this does not work, delete ~/.TileZed)
-3. Click Tools -> Tile Properties (.tiles)
-4. Create new tileset named something meaningful located within supplemental/Tiles
-5. Add necessary tilesets and save the tiles
+Generated tiles should be stored within `supplemental/Tiles` and packs in `supplemental/Packs`.
+Be sure to update `settings.sh` to include the new tileset or pack in the relevant mod and include
+those files to be managed by git by adding them to the `.gitignore` file as an excluded ignore.
+(This is needed because there is a global ignore for anything within Packs and Tiles.)
 
-### Add or update tileset
-
-For tilesets, save the full tileset as a .png within designs/tilesets (1024x2048 recommended).
-The image filename should match what you want the tileset to be named.
-
-1. Run `deploy_local.sh` to copy tileset into TileZed
-2. Run TileZed.sh and click Tools -> Tilesets... to rebuild the local cache of tilesets
-3. (if this does not work, delete ~/.TileZed)
-4. Click Tools -> Tile Properties (.tiles)
-5. Open mod tileset from supplemental/Tiles
-6. Add necessary tilesets and save the tiles
-
-### Update Pack
-
-1. Run TileZed.sh and click Tools -> Create .pack file
-2. Save .pack file in supplemental/Packs/ (overwriting existing file if necessary)
-3. Add designs/tilesets as input image directories
-4. Add mod-specific tiles file from supplemental/Tiles/ if necessary
+These packs and tiles will automatically get deployed with the mod upon running `deploy_local.sh`
+(assuming you added them to settings.sh).
 
 
 ## Deploying Local Code
