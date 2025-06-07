@@ -25,7 +25,7 @@ if [ -z "$P" ]; then
 	echo "Have you ran the game yet?"
 	exit 1
 fi
-PZ_DIR_PATH="$(echo "$P" | sed 's:JVM=\(.*\)/jre64/lib/server/libjvm.so:\1:')"
+export PZ_DIR_PATH="$(echo "$P" | sed 's:JVM=\(.*\)/jre64/lib/server/libjvm.so:\1:')"
 
 # Ensure all the necessary directories in the project exist
 [ -d "$HERE/supplemental/Tiles" ] || mkdir -p "$HERE/supplemental/Tiles"
