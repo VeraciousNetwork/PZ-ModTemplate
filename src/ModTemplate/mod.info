@@ -1,0 +1,6 @@
+name=Mod Template
+id=ModTemplate
+description=This is an example mod containing two maps.
+poster=poster.png
+versionMin=41.0
+versionMax=41.999
