@@ -1,0 +1,8 @@
+name=Your Example Mod
+id=YourExampleMod
+description=This is an example mod that does not contain anything.
+poster=poster.png
+icon=logo_mini.png
+author=Your Name
+versionMin=41.0
+versionMax=41.999

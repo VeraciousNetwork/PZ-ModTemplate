@@ -9,19 +9,6 @@ HERE="$(realpath "$(dirname "$0")")"
 source "$HERE/settings.sh"
 
 
-CHANGELOG="$(cat "$HERE/CHANGELOG.bbcode")"
-if [ -z "$CHANGELOG" ]; then
-	echo "ERROR: Please enter a note of changes in $HERE/CHANGELOG.bbcode"
-	exit 1
-fi
-
-if [ "$CHANGELOG" == "[list]
-  [*]
-[/list]" ]; then
-	echo "ERROR: Please enter a note of changes in $HERE/CHANGELOG.bbcode"
-	exit 1
-fi
-
 if [ ! -e "$HERE/DESCRIPTION.bbcode" ]; then
 	echo "ERROR: Please create a DESCRIPTION.bbcode with the contents of the mod description"
 	exit 1
@@ -106,7 +93,6 @@ cat > "$DIST/metadata.vdf" << EOD
   "visibility" "0"
   "title" "$MOD_TITLE"
   "description" "$MOD_DESCRIPTION"
-  "changenote" "$CHANGELOG"
 }
 EOD
 
@@ -137,6 +123,7 @@ if [ -n "$MOD_VERSION" ]; then
 			sed -i "s/modversion=.*/modversion=$MOD_VERSION/" "$FILE"
 		else
 			# If not, append it to the end of the file
+			echo "" >> "$FILE"
 			echo "modversion=$MOD_VERSION" >> "$FILE"
 		fi
 	done
