@@ -32,18 +32,19 @@ export PZ_DIR_PATH="$(echo "$P" | sed 's:JVM=\(.*\)/jre64/lib/server/libjvm.so:\
 [ -d "$HERE/supplemental/Packs" ] || mkdir -p "$HERE/supplemental/Packs"
 [ -d "$HERE/supplemental/BlenderResources" ] || mkdir -p "$HERE/supplemental/BlenderResources"
 
-# Sync assets from the game installation
-find "$PZ_DIR_PATH" -name '*.tiles' | while read TILE; do
-	# Copy tiles to the local mod directory
-	# This is useful for TileZed to be able to load the tilesets.
-	cp "$TILE" "$HERE/supplemental/Tiles/"
-done
-
-find "$PZ_DIR_PATH/media/texturepacks" -name '*.pack' | while read PACK; do
-	# Copy packs to the local mod directory
-	# This is useful for TileZed to be able to load the packs.
-	cp "$PACK" "$HERE/supplemental/Packs/"
-done
+# Skip loading of game assets for now; this is buggy and needs resolved.
+## Sync assets from the game installation
+#find "$PZ_DIR_PATH" -name '*.tiles' | while read TILE; do
+#	# Copy tiles to the local mod directory
+#	# This is useful for TileZed to be able to load the tilesets.
+#	cp "$TILE" "$HERE/supplemental/Tiles/"
+#done
+#
+#find "$PZ_DIR_PATH/media/texturepacks" -name '*.pack' | while read PACK; do
+#	# Copy packs to the local mod directory
+#	# This is useful for TileZed to be able to load the packs.
+#	cp "$PACK" "$HERE/supplemental/Packs/"
+#done
 
 # Sync local tilesets to working directory for TileZed
 # These contain tilemaps for mod tiles
