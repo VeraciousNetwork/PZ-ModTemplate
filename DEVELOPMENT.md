@@ -24,15 +24,13 @@ This setup generally only needs to be run once.
 
 ## Tiles and Spritemap
 
-Pre-compiled spritemaps can be placed in `designs/tilesets` or individual tile images can be placed
-in `designs/tiles` and compiled with `generate_tilesets.sh`.
+Pre-compiled spritemaps can be placed in `designs/Tiles/2x` or individual tile images can be placed
+in `designs/Tiles/singles` and compiled with `generate_tilesets.sh`.
 
 These can be used to generate `Pack` files to get imported into tiles with TileZed.
 
-Generated tiles should be stored within `supplemental/Tiles` and packs in `supplemental/Packs`.
-Be sure to update `settings.sh` to include the new tileset or pack in the relevant mod and include
-those files to be managed by git by adding them to the `.gitignore` file as an excluded ignore.
-(This is needed because there is a global ignore for anything within Packs and Tiles.)
+Generated tiles should be stored within `designs/Tiles` and packs in `designs/Packs`.
+Be sure to update `settings.sh` to include the new tileset or pack in the relevant mod.
 
 These packs and tiles will automatically get deployed with the mod upon running `deploy_local.sh`
 (assuming you added them to settings.sh).

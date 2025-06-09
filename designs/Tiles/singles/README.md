@@ -6,21 +6,24 @@ create those directories and place all tiles into their respective directory.
 
 ```
 designs
-└── tiles
-	├── my_bench
-	│   ├── 1.png
-	│   ├── 2.png
-	│   └── 3.png
-	└── my_bed
-		├── 1.png
-		├── 2.png
-		└── 3.png
+└── Tiles
+    └── singles
+	    ├── my_bench
+	    │   ├── 1.png
+	    │   ├── 2.png
+	    │   └── 3.png
+	    └── my_bed
+		    ├── 1.png
+		    ├── 2.png
+		    └── 3.png
 ```
 
 Run `generate_tilesets.sh` to render all the tiles as a proper tileset that can be imported into your Pack.
+Given the example above, this will generate tilesets called `my_bench.png` and `my_bed.png`
+located in `designs/Tiles/2x`.
 
 From TileZed, Tools -> .pack File -> Create .pack file
-and select `designs/tilesets` as the input directory to compile all the tilesets into a single .pack file.
+and select `designs/Tiles/2x` as the input directory to compile all the tilesets into a single .pack file.
 
 **NOTE**, each tile file must be 128x256 pixels in size.  (@todo add support for additional sizes if required.)
 This will generate a spritemap that is 1024x2048.

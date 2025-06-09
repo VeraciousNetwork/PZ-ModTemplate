@@ -1,0 +1,1 @@
+Store your 1024x2048 tilesets here.  By default `generate_tilesets.sh` will render single tiles here.

@@ -1,19 +1,7 @@
-/libs/
-/logs/
-/dist/
-.secret
+/libs
+/logs
+/dist
 serialize.lua
-
-/supplemental/Packs/*
-/supplemental/pz-zdoc-3.1.0
-/supplemental/TileZed
-/supplemental/WorldEd
-/supplemental/Tiles/2x
-/supplemental/Tiles/*
-/supplemental/BlenderResources/
-/supplemental/Mods/
-
-# Add your pack and tiles to be INCLUDED in git by adding them below with an exclaimation mark.
-# ie:
-# !/supplemental/Packs/your_media.pack
-# !/supplemental/Tiles/your_media.tiles
+**/*.blend1
+/supplemental
+/designs/Models/render/*.png

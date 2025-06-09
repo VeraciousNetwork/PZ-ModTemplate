@@ -1,0 +1,1 @@
+Provides a location for Blender models in your project.
