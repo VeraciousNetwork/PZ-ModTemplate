@@ -5,3 +5,4 @@ serialize.lua
 **/*.blend1
 /supplemental
 /designs/Models/render/*.png
+/designs/Packs/*.bak
