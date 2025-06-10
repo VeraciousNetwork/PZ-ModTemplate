@@ -22,3 +22,11 @@ This code is generated from the live game code installed with Steam, (so it'll r
 ---
 
 To get started, just hit the **Use this template** button at the top of the page and clone this to your own repo.
+
+---
+
+If you use game assets in your mod, be sure to include the following legal dislcaimer.
+
+Thanks to The Indie Stone for creating [Project Zomboid](http://projectzomboid.com/), which made this possible.
+This is an unofficial fan production for non-commercial purposes made under
+[the Indie Stone Terms](https://theindiestone.com/forums/index.php?/topic/2530-mod-permissions/#comment-36481).
